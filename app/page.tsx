@@ -11,6 +11,7 @@ export default function HomePage() {
     <PageLayout>
       <HeroSection />
       <CostSavingsSection />
+      
       <DashboardPreviewSection />
       <ModelGridSection />
       <FeaturesSection />
