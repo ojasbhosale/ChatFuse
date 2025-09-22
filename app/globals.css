@@ -94,7 +94,7 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-chatfuse-blue hover:bg-chatfuse-blue-hover text-white px-6 py-3 rounded-button font-medium text-body transition-all duration-200 ease;
+    @apply bg-chatfuse-blue hover:bg-chatfuse-blue-hover text-white px-6 py-3 rounded-button font-medium text-body transition-all duration-200 ease-in-out;
   }
 
   .btn-secondary {

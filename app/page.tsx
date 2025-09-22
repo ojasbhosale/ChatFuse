@@ -1,6 +1,6 @@
 import { PageLayout } from "@/components/layout/page-layout"
 import HeroSection from "@/components/sections/hero-section"
-import { CostSavingsSection } from "@/components/sections/cost-savings-section"
+import CostSavingsSection from "@/components/sections/cost-savings-section"
 import { DashboardPreviewSection } from "@/components/sections/dashboard-preview-section"
 import { ModelGridSection } from "@/components/sections/model-grid-section"
 import { FeaturesSection } from "@/components/sections/features-section"
