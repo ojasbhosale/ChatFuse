@@ -118,6 +118,23 @@
   }
 }
 
+@keyframes scroll-infinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll-infinite {
+  animation: scroll-infinite 40s linear infinite;
+  will-change: transform;
+}
+
+
+
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
