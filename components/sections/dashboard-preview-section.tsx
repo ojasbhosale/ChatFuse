@@ -147,13 +147,13 @@ export function DashboardPreviewSection() {
         </div>
 
         {/* Main Dashboard Card - Better Grid Layout */}
-        <div className="group relative max-w-7xl mx-auto mb-16">
+        <div className="group relative max-w-7xl  mx-auto mb-10">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-blue-500/10 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500" />
           
-          <Card className="relative bg-white/95 backdrop-blur-sm border-2 border-purple-200/60 rounded-3xl p-8 hover:bg-white hover:border-purple-300/80 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 hover:scale-[1.01] hover:-translate-y-1">
+          <Card className="relative bg-white/95 backdrop-blur-sm border-2 border-purple-200/60 rounded-3xl p-10 hover:bg-white hover:border-purple-300/80 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 hover:scale-[1.01] hover:-translate-y-1">
             
             {/* Improved Grid Layout */}
-            <div className="grid grid-cols-12 gap-6">
+            <div className="grid grid-cols-12 gap-6 items-end">
               {/* Main Chat Interface - Takes more space */}
               <div className="col-span-12 lg:col-span-8 space-y-6">
                 {/* Chat Header */}
@@ -253,56 +253,7 @@ export function DashboardPreviewSection() {
 
               {/* Sidebar - Optimized Space Usage */}
               <div className="col-span-12 lg:col-span-4 space-y-6">
-                {/* AI Personas */}
-                <div className="bg-gradient-to-br from-purple-50/80 to-blue-50/80 backdrop-blur-sm border border-purple-200/60 rounded-2xl p-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <User className="!w-5 !h-5 text-purple-600" />
-                    AI Personas
-                  </h4>
-                  <div className="grid grid-cols-2 gap-3">
-                    {aiPersonas.map((persona, index) => (
-                      <Button
-                        key={index}
-                        variant="ghost"
-                        className="group flex flex-col items-center p-3 h-auto hover:bg-white/80 hover:shadow-md rounded-xl transition-all duration-300 hover:scale-105 hover:-translate-y-1"
-                      >
-                        <div className={`bg-gradient-to-r ${persona.gradient} rounded-xl p-2 flex items-center justify-center mb-2 group-hover:rotate-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                          <persona.icon className="text-white !w-5 !h-5" />
-                        </div>
-                        <span className="text-xs font-semibold text-gray-800 group-hover:text-purple-700 transition-colors">
-                          {persona.name}
-                        </span>
-                      </Button>
-                    ))}
-                  </div>
-                </div>
-
-                {/* My Documents */}
-                <div className="bg-gradient-to-br from-blue-50/80 to-cyan-50/80 backdrop-blur-sm border border-blue-200/60 rounded-2xl p-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <FileText className="!w-5 !h-5 text-blue-600" />
-                    My Documents
-                  </h4>
-                  
-                  <div className="space-y-3">
-                    {documents.map((doc, index) => (
-                      <div key={index} className="group flex items-center justify-between p-3 hover:bg-white/80 rounded-xl cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-md">
-                        <div className="flex items-center gap-3 flex-1 min-w-0">
-                          <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                            <doc.icon className={`${doc.color} !w-4 !h-4`} />
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <span className="text-sm font-semibold text-gray-800 block group-hover:text-blue-700 transition-colors truncate">
-                              {doc.name}
-                            </span>
-                            <span className="text-xs text-gray-500">{doc.size}</span>
-                          </div>
-                        </div>
-                        <ArrowRight className="!w-3 !h-3 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                
 
                 {/* Conversation History */}
                 <div className="bg-gradient-to-br from-green-50/80 to-emerald-50/80 backdrop-blur-sm border border-green-200/60 rounded-2xl p-6">
@@ -343,6 +294,17 @@ export function DashboardPreviewSection() {
           </Card>
         </div>
 
+        {/* Bottom CTA */}
+        <div className="text-center mb-6">
+          <button className="group relative px-6 py-5 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full text-white font-bold text-lg shadow-2xl shadow-purple-500/30 hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 hover:-translate-y-1">
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
+            <div className="relative flex items-center justify-center gap-3">
+              <span>Try the Dashboard</span>
+              <ArrowRight className="!w-5 !h-5 group-hover:translate-x-1 transition-transform duration-300" />
+            </div>
+          </button>
+        </div>
+
         {/* Feature Highlights */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
           {[
@@ -374,7 +336,7 @@ export function DashboardPreviewSection() {
             <div key={index} className="group relative">
               <div className={`absolute inset-0 bg-gradient-to-br ${feature.bgGradient} rounded-2xl blur-lg group-hover:blur-xl transition-all duration-500`} />
               
-              <Card className={`relative bg-white/90 backdrop-blur-sm border-2 ${feature.borderColor} rounded-2xl p-8 hover:bg-white hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2`}>
+              <Card className={`relative bg-white/90 backdrop-blur-sm border-2 ${feature.borderColor} rounded-2xl p-6 hover:bg-white hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2`}>
                 <div className={`w-14 h-14 bg-gradient-to-r ${feature.gradient} rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                   <feature.icon className="text-white !w-7 !h-7" />
                 </div>
@@ -391,16 +353,7 @@ export function DashboardPreviewSection() {
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center">
-          <button className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full text-white font-bold text-lg shadow-2xl shadow-purple-500/30 hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 hover:-translate-y-1">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
-            <div className="relative flex items-center justify-center gap-3">
-              <span>Try the Dashboard</span>
-              <ArrowRight className="!w-5 !h-5 group-hover:translate-x-1 transition-transform duration-300" />
-            </div>
-          </button>
-        </div>
+        
       </div>
 
       {/* Bottom fade */}

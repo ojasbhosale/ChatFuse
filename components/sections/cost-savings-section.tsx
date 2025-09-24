@@ -99,7 +99,7 @@ export default function CostSavingsSection() {
   const monthlySavings = totalWithoutChatFuse - chatFuseCost
 
   return (
-    <section className="relative py-16 sm:py-20 mt-4 lg:py-24 overflow-hidden bg-gradient-to-br from-red-50/30 via-orange-50/20 to-yellow-50/30">
+    <section className="relative py-16 sm:py-20  lg:py-38 overflow-hidden bg-gradient-to-br from-red-50/30 via-orange-50/20 to-yellow-50/30">
       {/* Animated Background */}
       <div className="absolute inset-0">
         {/* Primary gradient overlay */}
@@ -172,7 +172,7 @@ export default function CostSavingsSection() {
                         </div>
                       </div>
         
-                      <div className="bg-white border-2 border-red-100 rounded-2xl p-8 shadow-xl shadow-red-500/5 hover:shadow-red-500/10 transition-shadow duration-300 h-full flex flex-col">
+                      <div className="bg-white border-2 border-red-100 rounded-2xl p-10 shadow-xl shadow-red-500/5 hover:shadow-red-500/10 transition-shadow duration-300 h-full flex flex-col">
                         {/* Header */}
                         <div className="text-center mb-8">
                           <h3 className="text-2xl font-bold text-gray-900 mb-3">Without <span className='text-text-logo1'>Chat</span><span className="text-text-logo">Fuse</span></h3>
@@ -221,7 +221,7 @@ export default function CostSavingsSection() {
                         </div>
                       </div>
         
-                      <div className="bg-white border-2 border-green-100 rounded-2xl p-8 shadow-xl shadow-green-500/5 hover:shadow-green-500/10 transition-all duration-300 h-full flex flex-col hover:scale-[1.01]">
+                      <div className="bg-white border-2 border-green-100 rounded-2xl p-10 shadow-xl shadow-green-500/5 hover:shadow-green-500/10 transition-all duration-300 h-full flex flex-col hover:scale-[1.01]">
                         {/* Header */}
                         <div className="text-center mb-8">
                           <h3 className="text-2xl font-bold text-gray-900 mb-3 flex items-center justify-center ">

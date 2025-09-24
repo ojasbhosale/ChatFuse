@@ -48,7 +48,7 @@ function GradientOrb({ className = "", delay = 0 }) {
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-gray-50 via-white to-blue-50/30">
+    <section className="relative pb-10 min-h-screen overflow-hidden bg-gradient-to-br from-gray-50 via-white to-blue-50/30">
       {/* Animated Background */}
       <div className="absolute inset-0">
         {/* Primary gradient overlay */}
