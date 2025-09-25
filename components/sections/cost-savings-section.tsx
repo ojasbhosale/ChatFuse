@@ -169,7 +169,7 @@ export default function CostSavingsSection() {
         </div>
 
         {/* Comparison Grid */}
-        <div className="max-w-6xl mx-2 lg:mx-auto mb-12 sm:mb-16">
+        <div className="max-w-6xl mx-2 px-4 lg:mx-auto mb-12 sm:mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
             {/* Without ChatFuse Card */}
             <div className="relative group order-2 lg:order-1">
@@ -181,7 +181,8 @@ export default function CostSavingsSection() {
                 </div>
               </div>
 
-              <div className="bg-white border-2 border-red-100 rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-10 shadow-xl shadow-red-500/5 hover:shadow-red-500/10 transition-shadow duration-300 h-full flex flex-col">
+              <div className="bg-gradient-to-br from-yellow-50/80 to-orange-50/60 border-2 border-red-200 rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-10 shadow-xl shadow-red-500/5 hover:shadow-red-500/10 transition-shadow duration-300 h-full flex flex-col">
+                <div className='absolute inset-0 bg-gradient-to-br from-yellow-400 to-orange-500 opacity-15 rounded-xl sm:rounded-2xl'></div>
                 {/* Header */}
                 <div className="text-center mb-6 sm:mb-8">
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3">
@@ -198,10 +199,10 @@ export default function CostSavingsSection() {
                   {withoutChatFuseServices.map((service, index) => (
                     <div 
                       key={index} 
-                      className={`flex justify-between items-center px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl text-sm sm:text-base ${
+                      className={`flex justify-between items-center px-3 py-2 sm:py-3 rounded-lg sm:rounded-xl text-sm sm:text-base ${
                         service.isHighlight 
                           ? 'bg-red-50 border border-red-200' 
-                          : 'bg-gray-50'
+                          : 'bg-white'
                       }`}
                     >
                       <span className="font-medium text-gray-700">{service.name}</span>
@@ -232,7 +233,8 @@ export default function CostSavingsSection() {
                 </div>
               </div>
 
-              <div className="bg-white border-2 border-green-100 rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-10 shadow-xl shadow-green-500/5 hover:shadow-green-500/10 transition-all duration-300 h-full flex flex-col hover:scale-[1.01]">
+              <div className="bg-gradient-to-br from-green-50/80 to-emerald-50/60 border-2 border-green-400 rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-10 shadow-xl shadow-green-500/5 hover:shadow-green-500/10 transition-all duration-300 h-full flex flex-col hover:scale-[1.01]">
+                <div className='absolute inset-0 bg-gradient-to-br from-green-400 to-emerald-500 opacity-15 rounded-xl sm:rounded-2xl'></div>
                 {/* Header */}
                 <div className="text-center mb-6 sm:mb-8">
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3 flex items-center justify-center">
@@ -251,9 +253,9 @@ export default function CostSavingsSection() {
                     <h4 className="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Core Features</h4>
                     <div className="space-y-2">
                       {chatFuseFeatures.map((feature, index) => (
-                        <div key={index} className="flex items-center gap-2 sm:gap-3 py-1">
-                          <div className="w-4 h-4 sm:w-5 sm:h-5 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-                            <Check className="text-white w-2.5 h-2.5 sm:w-3 sm:h-3" />
+                        <div key={index} className="flex items-center bg-white border-2 border-red-50 rounded-lg gap-2 sm:gap-3 p-2">
+                          <div className="w-6 h-6 sm:w-6 sm:h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                            <Check className="text-white w-3 h-3 sm:w-3 sm:h-3" />
                           </div>
                           <span className="text-gray-700 font-medium text-sm sm:text-base">{feature}</span>
                         </div>
@@ -266,9 +268,9 @@ export default function CostSavingsSection() {
                     <h4 className="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Bonus Features</h4>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-3 gap-2">
                       {bonusFeatures.map((feature, index) => (
-                        <div key={index} className="flex items-center gap-2">
-                          <div className="w-4 h-4 sm:w-5 sm:h-5 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0">
-                            <Sparkles className="text-white w-2.5 h-2.5 sm:w-3 sm:h-3" />
+                        <div key={index} className="flex items-center rounded-lg p-2 bg-red-50 border border-red-200 gap-2">
+                          <div className="w-6 h-6 sm:w-6 sm:h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0">
+                            <Sparkles className="text-white w-3 h-3 sm:w-3 sm:h-3" />
                           </div>
                           <span className="text-gray-700 font-medium text-sm sm:text-base">{feature}</span>
                         </div>

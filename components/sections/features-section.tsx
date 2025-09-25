@@ -143,23 +143,24 @@ export default function FeaturesSection() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 max-w-5xl mx-3 sm:mx-auto">
           {features.map((feature, index) => (
             <div
               key={feature.title}
-              className={`group relative p-8 sm:p-10 lg:p-12 bg-white/80 backdrop-blur-sm border border-gray-200/60 rounded-3xl hover:bg-white/90 hover:border-gray-300/80 hover:shadow-2xl ${feature.shadowColor} transition-all duration-500 hover:scale-105 hover:-translate-y-3`}
+              className={`group relative p-5 sm:p-10 lg:p-12 bg-white/80 backdrop-blur-sm border border-gray-200/60 rounded-3xl hover:bg-white/90 hover:border-gray-300/80 hover:shadow-2xl ${feature.shadowColor} transition-all duration-500 hover:scale-105 hover:-translate-y-3 
+                          flex flex-col items-center md:items-start`} // <-- center only on mobile
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Background gradient */}
               <div className={`absolute inset-0 bg-gradient-to-br ${feature.bgGradient} rounded-3xl opacity-100 transition-opacity duration-500`} />
 
               {/* Content */}
-              <div className="relative z-10">
+              <div className="relative z-10 flex flex-col items-center md:items-start text-center md:text-left">
                 {/* Icon container */}
                 <div
-                  className={`w-20 h-20  bg-gradient-to-br ${feature.gradient} rounded-2xl flex items-center justify-center mb-6 sm:mb-8 group-hover:rotate-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                  className={`w-20 h-20 bg-gradient-to-br ${feature.gradient} rounded-2xl flex items-center justify-center mb-6 sm:mb-8 group-hover:rotate-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
                 >
-                  <feature.icon className="text-white w-10 h-10 " />
+                  <feature.icon className="text-white w-10 h-10" />
                 </div>
 
                 {/* Title */}
@@ -171,8 +172,6 @@ export default function FeaturesSection() {
                 <p className="text-gray-600 leading-relaxed text-sm sm:text-base lg:text-lg group-hover:text-gray-700 transition-colors duration-300">
                   {feature.description}
                 </p>
-
-          
               </div>
 
               {/* Corner accent */}
@@ -180,6 +179,7 @@ export default function FeaturesSection() {
             </div>
           ))}
         </div>
+
       </div>
 
       {/* Bottom fade with different color */}

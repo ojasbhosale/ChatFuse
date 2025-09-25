@@ -134,7 +134,7 @@ export default function HeroSection() {
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center pt-20 lg:pt-12 mb-20  lg:mb-20">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center pt-12 lg:pt-12 mb-20  lg:mb-20">
             <button className="group relative px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold text-sm sm:text-base lg:text-lg shadow-2xl shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 hover:-translate-y-1">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
               <div className="relative flex items-center justify-center gap-2 sm:gap-3">

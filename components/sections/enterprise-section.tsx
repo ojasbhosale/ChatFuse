@@ -77,7 +77,7 @@ export default function EnterpriseSection() {
   ]
 
   return (
-    <section id='enterprise' className="relative py-16 sm:py-20 lg:py-24 overflow-hidden bg-gradient-to-br from-lime-50 via-white to-emerald-50/60">
+    <section id='enterprise' className="relative py-12 sm:py-20 lg:py-20 overflow-hidden bg-gradient-to-br from-lime-50 via-white to-emerald-50/60">
       {/* Animated Background */}
       <div className="absolute inset-0">
         {/* Primary gradient overlay */}
@@ -131,11 +131,11 @@ export default function EnterpriseSection() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16 sm:mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-3 sm:mx-auto mb-16 sm:mb-20">
           {features.map((feature, index) => (
             <div 
               key={feature.title}
-              className={`group relative p-6 sm:p-8 lg:p-12 bg-white/85 backdrop-blur-sm border border-gray-200/70 rounded-2xl hover:bg-white/95 hover:border-gray-300/90 hover:shadow-2xl hover:${feature.shadowColor} transition-all duration-500 hover:scale-105 hover:-translate-y-2`}
+              className={`group relative py-6 px-6 sm:p-8 lg:p-12 bg-white/85 backdrop-blur-sm border border-green-300 rounded-2xl hover:bg-white/95 hover:border-gray-300/90 hover:shadow-2xl hover:${feature.shadowColor} transition-all duration-500 hover:scale-105 hover:-translate-y-2`}
               style={{
                 animationDelay: `${index * 0.15}s`
               }}
@@ -171,18 +171,18 @@ export default function EnterpriseSection() {
         </div>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4 sm:px-0">
-          <button className="group relative px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-lime-600 to-emerald-600 rounded-full text-white font-semibold text-base sm:text-lg shadow-2xl shadow-lime-500/30 hover:shadow-lime-500/50 transition-all duration-300 hover:scale-105 hover:-translate-y-1">
+        <div className="flex flex-col justify-center sm:flex-row gap-3 sm:gap-6  mx-3 sm:px-0">
+          <button className="group relative px-4 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-lime-600 to-emerald-600 rounded-full text-white font-semibold text-base sm:text-lg shadow-2xl shadow-lime-500/30 hover:shadow-lime-500/50 transition-all duration-300 hover:scale-105 hover:-translate-y-1">
             <div className="absolute inset-0 bg-gradient-to-r from-lime-500 to-emerald-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
             <div className="relative flex items-center justify-center gap-3">
               <span>Explore Compliance Center</span>
-              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              <ArrowRight className="w-3 h-3 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </div>
           </button>
           
           <button className="group px-8 sm:px-10 py-4 sm:py-5 bg-white/80 backdrop-blur-sm border-2 border-gray-200 rounded-full text-gray-700 font-semibold text-base sm:text-lg hover:bg-white hover:border-gray-300 hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-translate-y-1">
             <div className="flex items-center justify-center gap-3">
-              <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
+              <Phone className="w-3 h-3 sm:w-5 sm:h-5" />
               <span>Contact Enterprise Team</span>
             </div>
           </button>

@@ -69,30 +69,36 @@ function ModelCard({ name, description, icon: Icon, gradient, iconBg, cardBg, bo
         {/* Inner highlight */}
         <div className="absolute inset-px bg-gradient-to-b from-white/10 to-transparent rounded-[25px] pointer-events-none" />
         
-        <div className="relative z-10">
-          {/* Icon container */}
-          <div className="relative mb-6">
-            <div className={`w-12 h-12 ${iconBg} rounded-[16px] flex items-center justify-center shadow-2xl shadow-black/10 relative overflow-hidden group-hover:scale-105 transition-transform duration-300`}>
-              {/* Icon shine effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent" />
-              <Icon className="text-white w-6 h-6 relative z-10" />
-            </div>
-            
-            {/* Icon glow */}
-            <div className={`absolute inset-0 w-20 h-20 ${iconBg} rounded-[20px] blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-300`} />
+        <div className="relative z-10 flex flex-col items-center sm:block">
+        {/* Icon container */}
+        <div className="relative mb-6">
+          <div
+            className={`w-12 h-12 ${iconBg} rounded-[16px] flex items-center justify-center shadow-2xl shadow-black/10 relative overflow-hidden group-hover:scale-105 transition-transform duration-300`}
+          >
+            {/* Icon shine effect */}
+            <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent" />
+            <Icon className="text-white w-6 h-6 relative z-10" />
           </div>
-          
-          {/* Content */}
-          <div className="space-y-2">
-            <h3 className="text-xl font-bold text-gray-900 leading-tight">
-              {name}
-            </h3>
-            
-            <p className="text-gray-600 text-base  leading-relaxed font-medium">
-              {description}
-            </p>
-          </div>
+
+          {/* Icon glow */}
+          <div
+            className={`absolute inset-0 w-20 h-20 ${iconBg} rounded-[20px] blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-300`}
+          />
         </div>
+
+        {/* Content */}
+        <div className="space-y-2 text-center sm:text-left">
+          <h3 className="text-xs sm:text-xl font-bold text-gray-900 leading-tight">
+            {name}
+          </h3>
+
+          {/* Hide description on mobile, visible from sm breakpoint */}
+          <p className="hidden sm:block text-gray-600 text-base leading-relaxed font-medium">
+            {description}
+          </p>
+        </div>
+      </div>
+
       </div>
     </div>
   )
@@ -117,42 +123,21 @@ function LogoStrip() {
 
     return (
     <div className="relative overflow-hidden py-8">
-  {/* wrapper for both strips */}
-  <div className="relative flex items-center">
-    {/* first strip */}
-    <div className="flex w-max animate-scroll-infinite whitespace-nowrap">
-      {logos.map((logo, index) => (
-        <div key={index} className="flex-shrink-0 px-12 py-6">
-          <div
-            className={`${logo.accent} font-bold text-lg lg:text-xl tracking-wide transition-all duration-300 hover:scale-110`}
-          >
-            {logo.name}
+      <div className="flex animate-scroll-infinite whitespace-nowrap gap-6 sm:gap-12">
+        {/* Duplicate logos twice to make continuous scroll */}
+        {[...logos, ...logos].map((logo, index) => (
+          <div key={index} className="flex-shrink-0 px-4 sm:px-12 py-4 sm:py-6">
+            <div
+              className={`${logo.accent} font-bold text-base sm:text-lg lg:text-xl tracking-wide transition-all duration-300 hover:scale-110`}
+            >
+              {logo.name}
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
-
-    {/* second strip */}
-    <div className="flex w-max animate-scroll-infinite whitespace-nowrap absolute inset-y-0 left-full items-center">
-      {logos.map((logo, index) => (
-        <div key={index} className="flex-shrink-0 px-12 py-6">
-          <div
-            className={`${logo.accent} font-bold text-lg lg:text-xl tracking-wide transition-all duration-300 hover:scale-110`}
-          >
-            {logo.name}
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-
-  {/* gradient overlays */}
-  <div className="absolute left-0 top-0 w-32 lg:w-48 h-full bg-gradient-to-r from-white via-white/95 to-transparent z-10" />
-  <div className="absolute right-0 top-0 w-32 lg:w-48 h-full bg-gradient-to-l from-white via-white/95 to-transparent z-10" />
-</div>
-
+        ))}
+      </div>
 
       
+    </div>
   )
 }
 
@@ -302,20 +287,25 @@ export default function ModelGridSection() {
           </div>
 
           {/* Premium Model Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-12 mb-32 mt-32 mx-auto max-w-6xl">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-12 mb-32 mt-32 mx-auto max-w-6xl">
             {models.map((model, index) => (
-              <ModelCard
+              <div
                 key={index}
-                name={model.name}
-                description={model.description}
-                icon={model.icon}
-                gradient={model.gradient}
-                iconBg={model.iconBg}
-                cardBg={model.cardBg}
-                borderGlow={model.borderGlow}
-              />
+                className={index === models.length - 1 ? "col-span-2 lg:col-span-1" : ""}
+              >
+                <ModelCard
+                  name={model.name}
+                  description={model.description}
+                  icon={model.icon}
+                  gradient={model.gradient}
+                  iconBg={model.iconBg}
+                  cardBg={model.cardBg}
+                  borderGlow={model.borderGlow}
+                />
+              </div>
             ))}
           </div>
+
 
           {/* Premium Logo Strip Section */}
           <div className="relative">
