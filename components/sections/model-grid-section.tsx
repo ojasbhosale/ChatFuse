@@ -228,7 +228,7 @@ export default function ModelGridSection() {
 
   return (
     <>
-      <section className="relative py-20 lg:py-34 overflow-hidden bg-gradient-to-br from-emerald-50/40 via-white to-cyan-50/50">
+      <section id='models' className="relative py-20 lg:py-34 overflow-hidden bg-gradient-to-br from-emerald-50/40 via-white to-cyan-50/50">
         {/* Premium Animated Background */}
         <div className="absolute inset-0">
           {/* Primary gradient overlay */}
