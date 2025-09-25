@@ -78,8 +78,8 @@ export function Footer() {
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 ">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+      <div className="relative z-10 max-w-7xl mx-3 sm:mx-auto px-2 sm:px-6 lg:px-8 py-12 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-12">
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <Link href="/" className="group flex items-center space-x-3 mb-6 w-fit">
@@ -98,23 +98,23 @@ export function Footer() {
 
             {/* Enhanced Privacy Features */}
             <div className="space-y-4">
-              <div className="group flex items-center space-x-3 p-3 rounded-xl bg-white/60 backdrop-blur-sm border border-gray-200/40 hover:bg-white/80 hover:border-gray-300/60 transition-all duration-300">
-                <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Lock className="w-4 h-4 text-white" />
+              <div className="group flex items-center space-x-3 p-3 rounded-xl bg-white/60 backdrop-blur-sm border hover:border-gray hover:bg-white/80 -300/60 transition-all duration-300">
+                <div className="w-6 h-6 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Lock className="w-3 h-3 text-white" />
                 </div>
                 <span className="text-sm font-medium text-gray-700">Your data is encrypted</span>
               </div>
               
-              <div className="group flex items-center space-x-3 p-3 rounded-xl bg-white/60 backdrop-blur-sm border border-gray-200/40 hover:bg-white/80 hover:border-gray-300/60 transition-all duration-300">
-                <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Shield className="w-4 h-4 text-white" />
+              <div className="group flex items-center space-x-3 p-3 rounded-xl bg-white/60 backdrop-blur-sm border border-gray-300/60 hover:bg-white/80  transition-all duration-300">
+                <div className="w-6 h-6 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Shield className="w-3 h-3 text-white" />
                 </div>
                 <span className="text-sm font-medium text-gray-700">Privacy protected</span>
               </div>
               
-              <div className="group flex items-center space-x-3 p-3 rounded-xl bg-white/60 backdrop-blur-sm border border-gray-200/40 hover:bg-white/80 hover:border-gray-300/60 transition-all duration-300">
-                <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <CheckCircle className="w-4 h-4 text-white" />
+              <div className="group flex items-center space-x-3 p-3 rounded-xl bg-white/60 backdrop-blur-sm border border-gray-300/60 hover:bg-white/80  transition-all duration-300">
+                <div className="w-6 h-6 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <CheckCircle className="w-3 h-3 text-white" />
                 </div>
                 <span className="text-sm font-medium text-gray-700">Zero-access active</span>
               </div>
@@ -122,27 +122,29 @@ export function Footer() {
           </div>
 
           {/* Navigation Sections */}
-          {Object.entries(footerSections).map(([title, links]) => (
-            <div key={title} className="space-y-5">
-              <h3 className="text-lg font-bold text-gray-900 relative">
-                {title}
-                <div className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full" />
-              </h3>
-              <ul className="space-y-3">
-                {links.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className="group flex items-center text-gray-600 hover:text-gray-900 transition-all duration-300"
-                    >
-                      <span className="text-sm sm:text-base">{link.name}</span>
-                      <ArrowUpRight className="w-3 h-3 ml-1 opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div className="grid grid-cols-3 lg:col-span-3 gap-8 mx-2">
+            {Object.entries(footerSections).map(([title, links]) => (
+              <div key={title} className="space-y-5">
+                <h3 className="text-lg font-bold text-gray-900 relative">
+                  {title}
+                  <div className="absolute -bottom-1 left-0 sm:w-1/2 w-1/4 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full" />
+                </h3>
+                <ul className="space-y-3">
+                  {links.map((link) => (
+                    <li key={link.name}>
+                      <Link
+                        href={link.href}
+                        className="group flex items-center text-gray-600 hover:text-gray-900 transition-all duration-300"
+                      >
+                        <span className="text-sm sm:text-base">{link.name}</span>
+                        <ArrowUpRight className="w-3 h-3 ml-1 opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Enhanced Bottom Section */}
@@ -150,7 +152,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
             {/* Copyright with enhanced styling */}
             <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
-              <p className="text-sm text-gray-500">© 2024 ChatFuse. All rights reserved.</p>
+              <p className="text-sm text-gray-500">© 2025 ChatFuse. All rights reserved.</p>
               <div className="hidden sm:block w-1 h-1 bg-gray-300 rounded-full" />
               <p className="text-sm text-gray-500">Made with ❤️ for AI enthusiasts</p>
             </div>
