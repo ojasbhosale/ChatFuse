@@ -13,27 +13,24 @@ import {
   Plus, 
   ChevronDown, 
   User, 
-  PenTool, 
-  BarChart3, 
-  Palette,
   MessageCircle,
   Zap,
   Sparkles,
   ArrowRight
 } from "lucide-react"
 
-const aiPersonas = [
-  { icon: User, name: "Developer", color: "bg-blue-100 text-blue-700", gradient: "from-blue-500 to-cyan-500" },
-  { icon: PenTool, name: "Writer", color: "bg-green-100 text-green-700", gradient: "from-green-500 to-emerald-500" },
-  { icon: BarChart3, name: "Analyst", color: "bg-purple-100 text-purple-700", gradient: "from-purple-500 to-pink-500" },
-  { icon: Palette, name: "Creative", color: "bg-orange-100 text-orange-700", gradient: "from-orange-500 to-red-500" },
-]
+// const aiPersonas = [
+//   { icon: User, name: "Developer", color: "bg-blue-100 text-blue-700", gradient: "from-blue-500 to-cyan-500" },
+//   { icon: PenTool, name: "Writer", color: "bg-green-100 text-green-700", gradient: "from-green-500 to-emerald-500" },
+//   { icon: BarChart3, name: "Analyst", color: "bg-purple-100 text-purple-700", gradient: "from-purple-500 to-pink-500" },
+//   { icon: Palette, name: "Creative", color: "bg-orange-100 text-orange-700", gradient: "from-orange-500 to-red-500" },
+// ]
 
-const documents = [
-  { name: "project_requirements.pdf", size: "2.3 MB", icon: FileText, color: "text-red-500" },
-  { name: "sales_data.xlsx", size: "1.1 MB", icon: BarChart3, color: "text-green-500" },
-  { name: "meeting_notes.md", size: "45 KB", icon: Code, color: "text-blue-500" },
-]
+// const documents = [
+//   { name: "project_requirements.pdf", size: "2.3 MB", icon: FileText, color: "text-red-500" },
+//   { name: "sales_data.xlsx", size: "1.1 MB", icon: BarChart3, color: "text-green-500" },
+//   { name: "meeting_notes.md", size: "45 KB", icon: Code, color: "text-blue-500" },
+// ]
 
 const conversationHistory = [
   { models: ["GPT-4o", "Claude 3.5", "Gemini Pro"], colors: ["bg-green-500", "bg-purple-500", "bg-blue-500"], topic: "Code debugging session" },

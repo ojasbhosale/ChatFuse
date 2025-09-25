@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from 'react'
-import { ArrowRight, Sparkles } from 'lucide-react'
+import {  Sparkles } from 'lucide-react'
 
 // Floating particle component for pricing
 function FloatingParticle({ delay = 0, duration = 20, size = 4 }) {

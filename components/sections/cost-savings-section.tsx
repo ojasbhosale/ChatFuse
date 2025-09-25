@@ -46,7 +46,7 @@ function GradientOrb({ className = "", delay = 0 }) {
 }
 
 // Animated counter component
-function AnimatedCounter({ target, duration = 2000, prefix = "", suffix = "" }) {
+function AnimatedCounter({ target, duration = 2000, prefix = "", suffix = "" }: { target: number; duration?: number; prefix?: string; suffix?: string }) {
   const [count, setCount] = useState(0)
 
   useEffect(() => {

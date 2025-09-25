@@ -192,7 +192,7 @@ export function PricingPlansSection() {
                   
                   {plan.name === "Yearly Plan" && (
                     <p className="text-sm text-gray-500">
-                      That's just $8.25/month billed yearly
+                      That&apos;s just $8.25/month billed yearly
                     </p>
                   )}
                 </div>

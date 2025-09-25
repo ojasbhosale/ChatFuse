@@ -48,7 +48,7 @@ function GradientOrb({ className = "", delay = 0 }) {
 interface ModelCardProps {
   name: string
   description: string
-  icon: React.ComponentType<any>
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
   gradient: string
   iconBg: string
   cardBg: string
