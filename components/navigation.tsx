@@ -21,7 +21,7 @@ export function Navigation() {
 
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
-      <div className="px-4 py-3 sm:py-4 md:py-5 max-container flex flex-col">
+      <div className="px-3 py-3 sm:py-4 md:py-5 max-container flex flex-col">
         {/* Main header row - always visible */}
         <div className="flex items-center justify-between h-12 sm:h-14 md:h-16">
           {/* Logo and Brand */}
@@ -83,7 +83,7 @@ export function Navigation() {
 
         {/* Mobile Navigation Menu - collapsible */}
         {isOpen && (
-          <div className="md:hidden pt-4 pb-2 border-t border-border mt-3">
+          <div className="md:hidden pt-6 pb-4 px-3 border-t border-border ">
             <div className="flex flex-col space-y-1">
               {/* Navigation Links */}
               {navigationItems.map((item) => (
@@ -92,7 +92,7 @@ export function Navigation() {
                   href={item.href}
                   className={cn(
                     "text-sm sm:text-base font-medium transition-colors hover:text-chatfuse-blue px-3 py-3 rounded-button hover:bg-gray-50",
-                    pathname === item.href ? "text-chatfuse-blue bg-blue-50" : "text-text-secondary",
+                    pathname === item.href ? "text-chatfuse-blue bg-blue-200" : "text-text-secondary",
                   )}
                   onClick={() => setIsOpen(false)}
                 >

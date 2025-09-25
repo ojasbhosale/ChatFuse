@@ -127,7 +127,7 @@ export function Footer() {
               <div key={title} className="space-y-5">
                 <h3 className="text-lg font-bold text-gray-900 relative">
                   {title}
-                  <div className="absolute -bottom-1 left-0 sm:w-1/2 w-1/4 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full" />
+                  <div className="absolute -bottom-1 left-0 sm:w-1/2 w-4/5 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full" />
                 </h3>
                 <ul className="space-y-3">
                   {links.map((link) => (

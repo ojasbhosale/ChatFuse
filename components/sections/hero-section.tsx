@@ -149,9 +149,9 @@ export default function HeroSection() {
           </div>
 
           {/* Three Pillars */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-3 sm:mx-auto">
             {/* Save Money Card */}
-            <div className="group relative p-6 sm:p-8 lg:p-10 bg-white/80 backdrop-blur-sm border border-gray-200/60 rounded-2xl lg:rounded-3xl hover:bg-white/90 hover:border-gray-300/80 hover:shadow-2xl hover:shadow-green-500/10 transition-all duration-500 hover:scale-105 hover:-translate-y-2">
+            <div className="group relative p-6 sm:p-8 lg:p-10 bg-white/80 backdrop-blur-sm border-2 border-gray-300 rounded-2xl lg:rounded-3xl hover:bg-white/90 hover:border-gray-400 hover:shadow-2xl hover:shadow-green-500/10 transition-all duration-500 hover:scale-105 hover:-translate-y-2">
               <div className="absolute inset-0 bg-gradient-to-br from-green-50/50 to-emerald-50/50 rounded-2xl lg:rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <div className="relative z-10 text-center">
@@ -170,7 +170,7 @@ export default function HeroSection() {
             </div>
 
             {/* All Models Card */}
-            <div className="group relative p-6 sm:p-8 lg:p-10 bg-white/80 backdrop-blur-sm border border-gray-200/60 rounded-2xl lg:rounded-3xl hover:bg-white/90 hover:border-gray-300/80 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 hover:scale-105 hover:-translate-y-2">
+            <div className="group relative p-6 sm:p-8 lg:p-10 bg-white/80 backdrop-blur-sm border-2 border-gray-300 rounded-2xl lg:rounded-3xl hover:bg-white/90 hover:border-gray-400 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 hover:scale-105 hover:-translate-y-2">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-cyan-50/50 rounded-2xl lg:rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <div className="relative z-10 text-center">
@@ -189,7 +189,7 @@ export default function HeroSection() {
             </div>
 
             {/* Familiar & Simple Card */}
-            <div className="group relative p-6 sm:p-8 lg:p-10 bg-white/80 backdrop-blur-sm border border-gray-200/60 rounded-2xl lg:rounded-3xl hover:bg-white/90 hover:border-gray-300/80 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 hover:scale-105 hover:-translate-y-2">
+            <div className="group relative p-6 sm:p-8 lg:p-10 bg-white/80 backdrop-blur-sm border-2 border-gray-300 rounded-2xl lg:rounded-3xl hover:bg-white/90 hover:border-gray-400 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 hover:scale-105 hover:-translate-y-2">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-50/50 to-pink-50/50 rounded-2xl lg:rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <div className="relative z-10 text-center">
